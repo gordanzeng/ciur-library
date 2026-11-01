@@ -234,8 +234,10 @@
     renderToc();
     if (book.learn) { var lb = $('learnBtn'); lb.hidden = false; lb.href = 'learn.html?b=' + id; lb.textContent = '✦ ' + T('learn'); }
 
-    var task = pdfjsLib.getDocument({ url: url, disableAutoFetch: true, disableStream: false, rangeChunkSize: 262144 });
-    task.onProgress = function (p) { if (p.total) $('lbar').style.width = Math.min(100, p.loaded / p.total * 100) + '%'; };
+    // One streamed download: these PDFs share resources across pages, so range requests end up fetching most of the file anyway.
+    var task = pdfjsLib.getDocument({ url: url, disableRange: true });
+    var total = book.size || 0;
+    task.onProgress = function (p) { var t = p.total || total; if (t) { $('lbar').style.width = Math.min(100, p.loaded / t * 100) + '%'; $('ltxt').textContent = T('loading') + ' ' + (p.loaded / 1048576).toFixed(1) + ' / ' + (t / 1048576).toFixed(1) + ' MB'; } };
     return task.promise;
   }).then(function (doc) {
     if (!doc) return;
