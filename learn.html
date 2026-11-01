@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>互动学习 | 卢大孔院双语教材在线书库</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f6b45'/%3E%3Cpath d='M7 9h8a3 3 0 0 1 3 3v12a3 3 0 0 0-3-3H7zM25 9h-5a3 3 0 0 0-3 3v12a3 3 0 0 1 3-3h5z' fill='%23fad201'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/learn.css">
+</head>
+<body class="learnpage">
+<div class="rbar">
+  <a class="ib" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg><span class="hide-sm" id="backTxt"></span></a>
+  <button class="ib lmenu" id="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg></button>
+  <div class="title" id="title"></div>
+  <a class="ib hide-sm" id="pdfLink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/></svg></a>
+  <div class="lang"><button data-l="zh">中</button><button data-l="en">EN</button><button data-l="rw">RW</button></div>
+</div>
+
+<aside class="ldrawer" id="drawer">
+  <div class="lsearch"><input id="sq" type="search" autocomplete="off"></div>
+  <nav id="topics"></nav>
+</aside>
+<div class="scrim" id="scrim"></div>
+
+<main class="lmain" id="main">
+  <div class="tools" id="tools">
+    <label><input type="checkbox" id="tPy" checked> <span id="lPy"></span></label>
+    <label><input type="checkbox" id="tRw" checked> <span id="lRw"></span></label>
+    <label><input type="checkbox" id="tEn" checked> <span id="lEn"></span></label>
+    <label class="practice"><input type="checkbox" id="tHide"> <span id="lHide"></span></label>
+    <label class="speed"><span id="lSpeed"></span> <input type="range" id="rate" min="0.5" max="1.2" step="0.1" value="0.8"> <b id="rateV">0.8</b></label>
+  </div>
+  <div class="note" id="note"></div>
+  <div id="content"></div>
+</main>
+
+<script src="assets/common.js"></script>
+<script src="assets/learn.js"></script>
+</body>
+</html>
