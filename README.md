@@ -26,7 +26,9 @@ Confucius Institute at the University of Rwanda · Bilingual Library
 
 ## 互动学习与语音
 
-- 朗读目前使用浏览器自带的中文合成语音（Web Speech API），手机或电脑上没有中文语音时，页面会提示安装方法。
+- **中文、英语**：使用设备自带的合成语音（Web Speech API）。设备上没有中文语音时，页面会提示安装方法。
+- **卢旺达语**：用 Meta 开源模型 MMS-TTS（`facebook/mms-tts-kin`，CC BY-NC 4.0，仅限非商业用途）预先合成，共747句，按话题打包成52个文件，放在 `audio/chinese-365/rw/`（`t01.mp3`～`t52.mp3`）；每句在文件中的起止时间记录在 `data/learn/chinese-365.json` 各句的 `ra` 字段里。
+- “整段连读”可以选择：只读中文、中文＋卢旺达语、中文＋卢旺达语＋英语。
 - **接入真人录音**：把录音按 `编号-句序.mp3` 命名，例如第64句的两句话分别命名为 `064-1.mp3`、`064-2.mp3`，放进 `audio/chinese-365/` 文件夹；然后在 `data/learn/chinese-365.json` 的最外层加上 `"audioBase":"audio/chinese-365/"`。网站就会自动改为播放录音。
 - 学习进度（“已学会”标记）保存在学员自己的浏览器里，不需要注册账号。
 
