@@ -273,7 +273,7 @@
   "level_rw": "Intangiriro",
   "title_rw": "Ndiga Ikinyarwanda",
   "desc_rw": "Cyateguwe ku bufatanye n’Inteko y’Umuco: amasomo 17 kuva ku nyuguti, gusuhuza n’imibare kugeza ku isoko no ku bitaro, hamwe n’urutonde rw’amagambo n’amabwiriza y’imivugire.",
-  "learn": false
+  "learn": true
  },
  {
   "id": "swahili-trilingual",

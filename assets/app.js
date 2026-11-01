@@ -22,8 +22,10 @@
     var series = list.filter(function (b) { return b.series === 'readers'; });
     var others = list.filter(function (b) { return b.series !== 'readers'; });
     var h = '';
-    var lb = list.filter(function (b) { return b.learn; })[0];
-    if (lb) h += '<a class="banner" href="learn.html?b=' + lb.id + '"><span class="pill">' + T('pilot') + '</span><span class="btxt">' + esc(T('learnBanner')) + '</span><span class="go">' + T('start') + ' →</span></a>';
+    list.filter(function (b) { return b.learn; }).forEach(function (lb) {
+      var bt = I18N[getLang()]['learnBanner_' + lb.id] || T('learnBanner');
+      h += '<a class="banner" href="learn.html?b=' + lb.id + '"><span class="pill">' + T('pilot') + '</span><span class="btxt">' + esc(bt) + '</span><span class="go">' + T('start') + ' →</span></a>';
+    });
     if (series.length) h += '<div class="section-title">' + T('series') + '</div><div class="grid">' + series.map(card).join('') + '</div>';
     if (others.length) h += '<div class="section-title">' + T('others') + '</div><div class="grid">' + others.map(card).join('') + '</div>';
     document.getElementById('shelf').innerHTML = h;

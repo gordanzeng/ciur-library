@@ -20,7 +20,12 @@ var I18N = {
     topics: '话题', showPy: '拼音', showRw: '卢旺达语', showEn: '英语', practice: '遮住中文自测', reveal: '点击显示',
     play: '朗读', playAll: '朗读整段', stop: '停止', speed: '语速', learned: '已学会', progress: '已学会 {a}/{b}',
     noVoice: '这台设备没有找到中文语音。可在手机“设置—语言与输入—文字转语音”中安装“中文（普通话）”语音，或改用 Chrome、Edge 浏览器。',
-    ttsNote: '朗读暂用设备自带的合成语音，真人录音将陆续上线。', viewPage: '原书第{n}页', prevTopic: '上一课', nextTopic: '下一课', searchSent: '搜索句子（中文、拼音、卢旺达语或英语）', sentNo: '第{n}句'
+    ttsNote: '朗读暂用设备自带的合成语音，真人录音将陆续上线。', viewPage: '原书第{n}页', prevTopic: '上一课', nextTopic: '下一课', searchSent: '搜索句子（中文、拼音、卢旺达语或英语）', sentNo: '第{n}句',
+    lessonNo: '第{n}课', lessons: '课程', showZh: '中文', practiceRw: '遮住卢旺达语自测', playZh: '朗读中文', progressSec: '已学会 {a}/{b} 个部分',
+    seqRw: '只读卢旺达语', seqRwZh: '卢旺达语＋中文', seqRwAll: '卢旺达语＋中文＋英语', searchRw: '搜索（卢旺达语、中文或英语）',
+    ttsNoteRw: '点句子右侧的喇叭听卢旺达语；中文、英语点文字后的小喇叭，用设备自带语音朗读。',
+    rwCreditRw: '卢旺达语语音由 Meta MMS-TTS 模型（facebook/mms-tts-kin）合成，仅供学习参考，个别发音和声调可能不够准确；中文和英语朗读使用设备自带语音。',
+    'learnBanner_kinyarwanda-2nd': '新上线：《实用卢旺达语（第2版）》互动学习——17课逐句听卢旺达语朗读，对照中文和英语，可遮住卢旺达语自测。'
   },
   en: {
     site: 'Confucius Institute at the University of Rwanda · Bilingual Library',
@@ -42,7 +47,12 @@ var I18N = {
     topics: 'Topics', showPy: 'Pinyin', showRw: 'Kinyarwanda', showEn: 'English', practice: 'Hide Chinese (self-test)', reveal: 'Tap to reveal',
     play: 'Play', playAll: 'Play dialogue', stop: 'Stop', speed: 'Speed', learned: 'Learned', progress: '{a}/{b} learned',
     noVoice: 'No Chinese voice was found on this device. Install a “Chinese (Mandarin)” text-to-speech voice in your phone settings, or use Chrome or Edge.',
-    ttsNote: 'Read-aloud currently uses your device’s synthetic voice; recorded audio is coming.', viewPage: 'Book p. {n}', prevTopic: 'Previous', nextTopic: 'Next', searchSent: 'Search sentences (Chinese, pinyin, Kinyarwanda or English)', sentNo: 'No. {n}'
+    ttsNote: 'Read-aloud currently uses your device’s synthetic voice; recorded audio is coming.', viewPage: 'Book p. {n}', prevTopic: 'Previous', nextTopic: 'Next', searchSent: 'Search sentences (Chinese, pinyin, Kinyarwanda or English)', sentNo: 'No. {n}',
+    lessonNo: 'Lesson {n}', lessons: 'Lessons', showZh: 'Chinese', practiceRw: 'Hide Kinyarwanda (self-test)', playZh: 'Play Chinese', progressSec: '{a}/{b} parts learned',
+    seqRw: 'Kinyarwanda only', seqRwZh: 'Kinyarwanda + Chinese', seqRwAll: 'Kinyarwanda + Chinese + English', searchRw: 'Search (Kinyarwanda, Chinese or English)',
+    ttsNoteRw: 'Tap the speaker on the right to hear the Kinyarwanda; the small speakers after the Chinese and English use your device’s voices.',
+    rwCreditRw: 'Kinyarwanda audio is synthesized with Meta’s MMS-TTS model (facebook/mms-tts-kin) for learning purposes and some pronunciation or tones may be imperfect; Chinese and English use your device’s voices.',
+    'learnBanner_kinyarwanda-2nd': 'New: interactive “Practical Kinyarwanda (2nd ed.)” — 17 lessons with Kinyarwanda read-aloud for every sentence, Chinese and English side by side, and a self-test mode.'
   },
   rw: {
     site: 'Ishuri rya Confucius rya Kaminuza y’u Rwanda · Isomero ry’Ibitabo by’Indimi Ebyiri',
@@ -64,7 +74,12 @@ var I18N = {
     topics: 'Insanganyamatsiko', showPy: 'Pinyin', showRw: 'Ikinyarwanda', showEn: 'Icyongereza', practice: 'Hisha Igishinwa (kwisuzuma)', reveal: 'Kanda urebe',
     play: 'Umva', playAll: 'Umva ikiganiro cyose', stop: 'Hagarika', speed: 'Umuvuduko', learned: 'Narabyize', progress: 'Byize {a}/{b}',
     noVoice: 'Iki gikoresho nta jwi ry’Igishinwa gifite. Shyiramo ijwi ry’“Igishinwa (Mandarin)” mu igenamiterere rya telefoni, cyangwa ukoreshe Chrome cyangwa Edge.',
-    ttsNote: 'Ubu hakoreshwa ijwi rya mudasobwa; amajwi yafashwe n’abantu azaza vuba.', viewPage: 'Urup. {n} rw’igitabo', prevTopic: 'Iribanza', nextTopic: 'Irikurikira', searchSent: 'Shakisha interuro (Igishinwa, pinyin, Ikinyarwanda cyangwa Icyongereza)', sentNo: 'Interuro {n}'
+    ttsNote: 'Ubu hakoreshwa ijwi rya mudasobwa; amajwi yafashwe n’abantu azaza vuba.', viewPage: 'Urup. {n} rw’igitabo', prevTopic: 'Iribanza', nextTopic: 'Irikurikira', searchSent: 'Shakisha interuro (Igishinwa, pinyin, Ikinyarwanda cyangwa Icyongereza)', sentNo: 'Interuro {n}',
+    lessonNo: 'Isomo rya {n}', lessons: 'Amasomo', showZh: 'Igishinwa', practiceRw: 'Hisha Ikinyarwanda (kwisuzuma)', playZh: 'Umva Igishinwa', progressSec: 'Ibice {a}/{b} wize',
+    seqRw: 'Ikinyarwanda gusa', seqRwZh: 'Ikinyarwanda + Igishinwa', seqRwAll: 'Ikinyarwanda + Igishinwa + Icyongereza', searchRw: 'Shakisha (Ikinyarwanda, Igishinwa cyangwa Icyongereza)',
+    ttsNoteRw: 'Kanda indangururamajwi iri iburyo wumve Ikinyarwanda; utundi tw’Igishinwa n’Icyongereza dukoresha amajwi y’igikoresho cyawe.',
+    rwCreditRw: 'Amajwi y’Ikinyarwanda yakozwe na porogaramu ya Meta MMS-TTS (facebook/mms-tts-kin) agamije kwiga; hari aho imivugire cyangwa amajwi bitaba binoze. Igishinwa n’Icyongereza bikoresha amajwi y’igikoresho cyawe.',
+    'learnBanner_kinyarwanda-2nd': 'Igishya: wiga “Ikinyarwanda K’ibanze (icapo rya 2)” — amasomo 17, umva buri nteruro mu Kinyarwanda, Igishinwa n’Icyongereza iruhande, no kwisuzuma.'
   }
 };
 
